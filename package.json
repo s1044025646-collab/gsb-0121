@@ -1,0 +1,23 @@
+{
+  "name": "odet-backend",
+  "version": "1.0.0",
+  "description": "Local-only object-detection evaluation and false-positive attribution backend (API + CLI + synthetic data + tests).",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --test --experimental-strip-types \"src/**/*.test.ts\"",
+    "cli": "node --experimental-strip-types src/cli/index.ts",
+    "demo": "node --experimental-strip-types src/demo.ts",
+    "start": "node --experimental-strip-types src/server.ts",
+    "stop": "node scripts/stop.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.3",
+    "typescript": "^7.0.2"
+  }
+}
